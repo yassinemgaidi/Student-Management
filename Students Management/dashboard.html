@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex">
+        <div class="fixed h-screen w-64 bg-blue-800 p-4">
+            <div class="text-white text-2xl font-bold mb-8">SchoolManager</div>
+            <nav>
+                <a href="dashboard.html" class="block text-white py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 mb-1 bg-blue-900">
+                    Dashboard
+                </a>
+                <a href="students.html" class="block text-white py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 mb-1">
+                    Students
+                </a>
+                <a href="classes.html" class="block text-white py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 mb-1">
+                    Classes
+                </a>
+                <a href="attendance.html" class="block text-white py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 mb-1">
+                    Attendance
+                </a>
+                <a href="grades.html" class="block text-white py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 mb-1">
+                    Grades
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="ml-64 p-8 w-full">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold">Dashboard</h1>
+                <div class="flex items-center">
+                    <span class="mr-4">Admin User</span>
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full mr-4">
+                    <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500 text-sm mb-2">Total Students</h3>
+                    <p class="text-3xl font-bold">1,234</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500 text-sm mb-2">Total Classes</h3>
+                    <p class="text-3xl font-bold">42</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500 text-sm mb-2">Average Attendance</h3>
+                    <p class="text-3xl font-bold">95%</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-gray-500 text-sm mb-2">Average Grade</h3>
+                    <p class="text-3xl font-bold">B+</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-bold mb-4">Recent Activity</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center p-4 border-b">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">New student registered</p>
+                            <p class="text-sm text-gray-500">2 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 border-b">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Attendance marked for Class 10A</p>
+                            <p class="text-sm text-gray-500">10 minutes ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
